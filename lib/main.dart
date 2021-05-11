@@ -23,75 +23,107 @@ class MyApp extends StatelessWidget {
         drawer: Drawer(),
         body: Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
+          width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: double.infinity,
-                margin: EdgeInsets.only(bottom: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
-                    color: Colors.blue[400],
-                    border: Border.all(width: 2)),
+                padding: EdgeInsets.symmetric(vertical: 10),
                 alignment: Alignment.center,
-                height: 45,
+                height: 50,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(7)),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.blue,
+                        spreadRadius: 1.0,
+                        blurRadius: 3.0,
+                        offset: Offset(3, 3)),
+                  ],
+                  gradient: LinearGradient(
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                      colors: [
+                        Colors.amber[400],
+                        Colors.white,
+                      ]),
+                ),
                 child: Text(
                   'Ingredients of italian pepperoni',
                   style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                      color: Colors.black87,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 20),
-                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(7)),
+                  gradient: LinearGradient(
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                      colors: [
+                        Colors.green[100],
+                        Colors.grey[200],
+                      ]),
+                ),
+                margin: EdgeInsets.only(top: 20, bottom: 20),
                 child: Text(
-                  "Pepperoni is made from a mixture of ground beef mixed with spices and"
+                  "Pepperoni is made from a mixture of ground beef mixed with spices and "
                   "flavorings. Salt and sodium nitrate are then added as curing agents, which prevent the"
                   "growth of unwanted microorganisms. Nitrate is also added, which gives pepperoni its color.",
                   style: TextStyle(
                     height: 1.5,
                     fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                  border: Border.all(width: 2),
-                ),
+                    borderRadius: BorderRadius.all(Radius.circular(7)),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.blue,
+                          spreadRadius: 1.0,
+                          blurRadius: 3.0,
+                          offset: Offset(3, 3)),
+                    ],
+                    gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: [
+                          Colors.yellow[400],
+                          Colors.white,
+                        ]),
+                    border: Border.all(width: 1)),
                 child: Column(
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.star,
-                              color: Colors.yellow[800],
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: Colors.yellow[800],
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: Colors.yellow[800],
-                            ),
-                            Icon(Icons.star),
-                            Icon(Icons.star),
-                          ],
-                        ),
+                        Row(children: [
+                          Icon(
+                            Icons.star,
+                            color: Colors.yellow[800],
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.yellow[800],
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.yellow[800],
+                          ),
+                          Icon(Icons.star),
+                          Icon(Icons.star),
+                        ]),
                         Text(
-                          ' 17 Reviews',
+                          '17 Rewiew',
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w600),
+                              fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -104,47 +136,65 @@ class MyApp extends StatelessWidget {
                             children: [
                               Icon(
                                 Icons.restaurant,
+                                size: 50,
                                 color: Colors.green,
-                                size: 40,
                               ),
                               Container(
-                                  padding: EdgeInsets.all(10),
-                                  child: Text('Feed')),
-                              Text('2 - 4'),
+                                  margin: EdgeInsets.only(top: 10, bottom: 5),
+                                  child: Text(
+                                    'Feed',
+                                    style: TextStyle(fontSize: 18),
+                                  )),
+                              Text(
+                                '2 - 4',
+                                style: TextStyle(fontSize: 18),
+                              ),
                             ],
                           ),
                           Column(
                             children: [
                               Icon(
-                                Icons.category,
+                                Icons.restaurant,
+                                size: 50,
                                 color: Colors.green,
-                                size: 40,
                               ),
                               Container(
-                                  padding: EdgeInsets.all(10),
-                                  child: Text('Feed')),
-                              Text('2 - 4'),
+                                  margin: EdgeInsets.only(top: 10, bottom: 5),
+                                  child: Text(
+                                    'Feed',
+                                    style: TextStyle(fontSize: 18),
+                                  )),
+                              Text(
+                                '2 - 4',
+                                style: TextStyle(fontSize: 18),
+                              ),
                             ],
                           ),
                           Column(
                             children: [
                               Icon(
-                                Icons.emoji_food_beverage,
+                                Icons.restaurant,
+                                size: 50,
                                 color: Colors.green,
-                                size: 40,
                               ),
                               Container(
-                                  padding: EdgeInsets.all(10),
-                                  child: Text('Feed')),
-                              Text('2 - 4'),
+                                  margin: EdgeInsets.only(top: 10, bottom: 5),
+                                  child: Text(
+                                    'Feed',
+                                    style: TextStyle(fontSize: 18),
+                                  )),
+                              Text(
+                                '2 - 4',
+                                style: TextStyle(fontSize: 18),
+                              ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                     ),
                   ],
                 ),
-              ),
+              )
             ],
           ),
         ),
